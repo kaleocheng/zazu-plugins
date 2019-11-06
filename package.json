@@ -1,0 +1,19 @@
+{
+  "name": "zazu-plugins",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kaleocheng/zazu-plugins.git"
+  },
+  "author": "Kaleo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kaleocheng/zazu-plugins/issues"
+  },
+  "homepage": "https://github.com/kaleocheng/zazu-plugins#readme"
+}
