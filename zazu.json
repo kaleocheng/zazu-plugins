@@ -1,0 +1,58 @@
+{
+  "name": "zazu-plugins",
+  "version": "1.0.0",
+  "description": "various Zazu plugins all in one",
+  "blocks": {
+    "input": [
+      {
+        "id": "dict",
+        "type": "PrefixScript",
+        "prefix": "dc",
+        "space": true,
+        "args": "optional",
+        "script": "src/dict.js",
+        "connections": ["QueryDict"]
+      },
+      {
+        "id": "blog-search",
+        "type": "PrefixScript",
+        "prefix": "s",
+        "space": true,
+        "args": "Required",
+        "script": "src/blog-search.js",
+        "connections": ["SearchDraft"]
+      },
+      {
+        "id": "todo",
+        "type": "Keyword",
+        "keyword": "todo",
+        "title": "Open todo list",
+        "connections": ["GetURL"]
+      }
+    ],
+    "output": [
+      {
+        "id": "QueryDict",
+        "type": "OpenInBrowser",
+        "url": "dict://{value}"
+      },
+      {
+        "id": "SearchDraft",
+        "type": "OpenInBrowser",
+        "url": "{value}"
+      },
+      {
+        "id": "GetURL",
+        "type": "UserScript",
+        "script": "src/todo.js",
+        "connections": ["OpenTodo"]
+      },
+      {
+        "id": "OpenTodo",
+        "type": "OpenInBrowser",
+        "url": "{value}"
+      }
+    ]
+  }
+}
+
