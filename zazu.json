@@ -28,6 +28,15 @@
         "keyword": "todo",
         "title": "Open todo list",
         "connections": ["GetURL"]
+      },
+      {
+          "id": "vault",
+          "type": "PrefixScript",
+          "prefix": "v",
+          "space": true,
+          "args": "Required",
+          "script": "src/vault.js",
+          "connections": ["Copy"]
       }
     ],
     "output": [
@@ -51,6 +60,11 @@
         "id": "OpenTodo",
         "type": "OpenInBrowser",
         "url": "{value}"
+      },
+      {
+        "id": "Copy",
+        "type": "CopyToClipboard",
+        "text": "{value}"
       }
     ]
   }
