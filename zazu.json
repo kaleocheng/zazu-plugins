@@ -27,7 +27,14 @@
         "type": "Keyword",
         "keyword": "todo",
         "title": "Open todo list",
-        "connections": ["GetURL"]
+        "connections": ["GetTodoURL"]
+      },
+      {
+        "id": "status",
+        "type": "Keyword",
+        "keyword": "status",
+        "title": "Open status page",
+        "connections": ["GetStatusURL"]
       },
       {
           "id": "vault",
@@ -51,13 +58,19 @@
         "url": "{value}"
       },
       {
-        "id": "GetURL",
+        "id": "GetTodoURL",
         "type": "UserScript",
         "script": "src/todo.js",
-        "connections": ["OpenTodo"]
+        "connections": ["Browser"]
       },
       {
-        "id": "OpenTodo",
+        "id": "GetStatusURL",
+        "type": "UserScript",
+        "script": "src/status.js",
+        "connections": ["Browser"]
+      },
+      {
+        "id": "Browser",
         "type": "OpenInBrowser",
         "url": "{value}"
       },
