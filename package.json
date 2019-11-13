@@ -20,5 +20,8 @@
     "fuse.js": "^3.4.5",
     "js-yaml": "^3.13.1",
     "request": "^2.88.0"
+  },
+  "devDependencies": {
+    "eslint": "^6.6.0"
   }
 }
