@@ -30,7 +30,7 @@ module.exports = (pluginContext) => {
             let length = args[0] || 8;
             resolve([{
                 title: `generate  ${length} password`,
-                value: generatePassword('normal', length)
+                value: generatePassword('strong', length)
             }])
 
         })
